@@ -3,8 +3,8 @@ services:
   tradenote:
     image: eleventrading/tradenote
     container_name: tradenote_app
-    ports:
-      - 8080:8080
+    expose:
+      - 8080
     environment:
       MONGO_URI: mongodb://tradenote:tradenote@mongo:27017/tradenote?authSource=admin
       TRADENOTE_DATABASE: tradenote
